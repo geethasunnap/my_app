@@ -120,6 +120,148 @@ Branch master set up to track remote branch master from origin.
 =============================================
 
 
+http://localhost:9090/configureTools/
+
+https://github.com/geethasunnap/my_app.git
+
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ ls
+pom.xml  readme.txt  src/  target/
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git add *
+warning: LF will be replaced by CRLF in target/surefire-reports/TEST-com.mycompany.app.AppTest.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in target/surefire-reports/com.mycompany.app.AppTest.txt.
+The file will have its original line endings in your working directory.
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git add .
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git commit -m "first commit"
+[master (root-commit) aed30b0] first commit
+warning: LF will be replaced by CRLF in target/surefire-reports/TEST-com.mycompany.app.AppTest.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in target/surefire-reports/com.mycompany.app.AppTest.txt.
+The file will have its original line endings in your working directory.
+ 12 files changed, 306 insertions(+)
+ create mode 100644 pom.xml
+ create mode 100644 readme.txt
+ create mode 100644 src/main/java/com/mycompany/app/App.java
+ create mode 100644 src/test/java/com/mycompany/app/AppTest.java
+ create mode 100644 target/classes/com/mycompany/app/App.class
+ create mode 100644 target/maven-archiver/pom.properties
+ create mode 100644 target/my-app-1.0-SNAPSHOT-shaded.jar
+ create mode 100644 target/my-app-1.0-SNAPSHOT.jar
+ create mode 100644 target/original-my-app-1.0-SNAPSHOT.jar
+ create mode 100644 target/surefire-reports/TEST-com.mycompany.app.AppTest.xml
+ create mode 100644 target/surefire-reports/com.mycompany.app.AppTest.txt
+ create mode 100644 target/test-classes/com/mycompany/app/AppTest.class
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ ll
+total 16
+-rw-r--r-- 1 geetalakshmi 1049089 1714 Nov  7 13:33 pom.xml
+-rw-r--r-- 1 geetalakshmi 1049089 5359 Nov  7 14:49 readme.txt
+drwxr-xr-x 1 geetalakshmi 1049089    0 Nov  7 12:53 src/
+drwxr-xr-x 1 geetalakshmi 1049089    0 Nov  8 14:17 target/
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ rm -rf target/
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    target/classes/com/mycompany/app/App.class
+        deleted:    target/maven-archiver/pom.properties
+        deleted:    target/my-app-1.0-SNAPSHOT-shaded.jar
+        deleted:    target/my-app-1.0-SNAPSHOT.jar
+        deleted:    target/original-my-app-1.0-SNAPSHOT.jar
+        deleted:    target/surefire-reports/TEST-com.mycompany.app.AppTest.xml
+        deleted:    target/surefire-reports/com.mycompany.app.AppTest.txt
+        deleted:    target/test-classes/com/mycompany/app/AppTest.class
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git commit -m "removed target"
+On branch master
+Changes not staged for commit:
+        deleted:    target/classes/com/mycompany/app/App.class
+        deleted:    target/maven-archiver/pom.properties
+        deleted:    target/my-app-1.0-SNAPSHOT-shaded.jar
+        deleted:    target/my-app-1.0-SNAPSHOT.jar
+        deleted:    target/original-my-app-1.0-SNAPSHOT.jar
+        deleted:    target/surefire-reports/TEST-com.mycompany.app.AppTest.xml
+        deleted:    target/surefire-reports/com.mycompany.app.AppTest.txt
+        deleted:    target/test-classes/com/mycompany/app/AppTest.class
+
+no changes added to commit
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    target/classes/com/mycompany/app/App.class
+        deleted:    target/maven-archiver/pom.properties
+        deleted:    target/my-app-1.0-SNAPSHOT-shaded.jar
+        deleted:    target/my-app-1.0-SNAPSHOT.jar
+        deleted:    target/original-my-app-1.0-SNAPSHOT.jar
+        deleted:    target/surefire-reports/TEST-com.mycompany.app.AppTest.xml
+        deleted:    target/surefire-reports/com.mycompany.app.AppTest.txt
+        deleted:    target/test-classes/com/mycompany/app/AppTest.class
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git add .
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git commit -m "removed target"
+[master 7cee823] removed target
+ 8 files changed, 72 deletions(-)
+ delete mode 100644 target/classes/com/mycompany/app/App.class
+ delete mode 100644 target/maven-archiver/pom.properties
+ delete mode 100644 target/my-app-1.0-SNAPSHOT-shaded.jar
+ delete mode 100644 target/my-app-1.0-SNAPSHOT.jar
+ delete mode 100644 target/original-my-app-1.0-SNAPSHOT.jar
+ delete mode 100644 target/surefire-reports/TEST-com.mycompany.app.AppTest.xml
+ delete mode 100644 target/surefire-reports/com.mycompany.app.AppTest.txt
+ delete mode 100644 target/test-classes/com/mycompany/app/AppTest.class
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git remote add origin https://github.com/geethasunnap/my_app.git
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+$ git push -u origin master
+Counting objects: 37, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (37/37), 8.53 KiB | 0 bytes/s, done.
+Total 37 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/geethasunnap/my_app.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+geetalakshmi@DFG61WQ1 MINGW64 /d/practice/maven_project/my-app (master)
+
+
+
 
 
 
